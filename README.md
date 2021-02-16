@@ -17,7 +17,7 @@ The workorder to return and pull request your part of the project are as follows
 1. Save all files you edited
 2. git add (A file you updated or use a "." )
 2. git commit -m "Add your commets here"
-3. git push orgin (name of branch)
+3. git push origin (name of branch)
 4. Create pull-request from your local repository to main on Github
 
 If you have any questions or isses, please contact Ryan Maharrey or Dr. V
