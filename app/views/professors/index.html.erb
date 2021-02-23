@@ -1,0 +1,13 @@
+<h1>All Students</h1>
+
+<ul>
+  <% @professors.each do |professor| %>
+    <li>
+      <a href="/professors/<%= professor.id %>">
+        <%= professor.Name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Professor", new_professor_path %>

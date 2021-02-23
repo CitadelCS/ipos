@@ -1,0 +1,6 @@
+<ul>
+  <li><%= link_to "Edit", edit_professor_path(@professor) %></li>
+  <li><%= link_to "Destroy", professor_path(@professor),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>

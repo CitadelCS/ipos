@@ -1,0 +1,21 @@
+<%= form_with model: professor do |form| %>
+  <div>
+    <%= form.label :FirstName %><br>
+    <%= form.text_field :FirstName %>
+    <% article.errors.full_messages_for(:FirstName).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :LastName %><br>
+    <%= form.text_area :LastName %><br>
+    <% article.errors.full_messages_for(:LastName).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

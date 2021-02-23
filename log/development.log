@@ -3276,3 +3276,113 @@ Processing by Clearance::SessionsController#new as HTML
 Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 4652)
 
 
+  [1m[35m (245.9ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+  [1m[35m (237.0ms)[0m  [1m[35mCREATE DATABASE "myapp_test" ENCODING = 'unicode'[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20210218011755)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "prefix" character varying, "name" character varying, "number" integer, "section" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210218011755"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStudents (20210219152433)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "Name" character varying, "CWID" integer, "Concentration" character varying, "Advisor" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210219152433"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20210221072628)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "email" character varying NOT NULL, "encrypted_password" character varying(128) NOT NULL, "confirmation_token" character varying(128), "remember_token" character varying(128) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210221072628"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-23 01:05:12.693626"], ["updated_at", "2021-02-23 01:05:12.693626"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 71.226.173.44 at 2021-02-23 01:08:56 +0000
+Cannot render console from 71.226.173.44! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (2.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:4
+  Rendered courses/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.4ms | Allocations: 9327)
+Completed 200 OK in 107ms (Views: 72.5ms | ActiveRecord: 2.0ms | Allocations: 13454)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProfessors (20210223011106)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "professors" ("id" bigserial primary key, "FirstName" character varying, "LastName" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210223011106"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sign_in" for 71.226.173.44 at 2021-02-23 01:40:21 +0000
+Cannot render console from 71.226.173.44! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Clearance::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (Duration: 9.1ms | Allocations: 1974)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (Duration: 28.0ms | Allocations: 6511)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.3ms | Allocations: 13789)
+Completed 200 OK in 71ms (Views: 60.8ms | ActiveRecord: 0.0ms | Allocations: 17306)
+
+
+Started GET "/sign_up" for 71.226.173.44 at 2021-02-23 01:40:34 +0000
+Cannot render console from 71.226.173.44! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Clearance::UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/clearance-1.15.1/app/views/users/_form.html.erb (Duration: 1.6ms | Allocations: 644)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1728)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5329)
+Completed 200 OK in 67ms (Views: 25.1ms | ActiveRecord: 8.2ms | Allocations: 13303)
+
+
+Started POST "/users" for 71.226.173.44 at 2021-02-23 01:40:40 +0000
+Cannot render console from 71.226.173.44! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Clearance::UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"rmaharre@citadel.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (5.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rmaharre@citadel.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2021-02-23 01:40:40.713162"], ["updated_at", "2021-02-23 01:40:40.713162"], ["email", "rmaharre@citadel.edu"], ["encrypted_password", "$2a$12$OFlNmrMHp8pmD0IPfdQ3dea.n852ONmCpFkaJARNSSZuZgiYiot.e"], ["remember_token", "d2b891aba83b52df4cb4e7dcc499a4d1ab363f82"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://4cbbf43d5f6a4a8abf1b05ac8859dd81.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 333ms (ActiveRecord: 9.6ms | Allocations: 5504)
+
+
+Started GET "/" for 71.226.173.44 at 2021-02-23 01:40:40 +0000
+Cannot render console from 71.226.173.44! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:4
+  Rendered courses/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "d2b891aba83b52df4cb4e7dcc499a4d1ab363f82"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 6091)
+Completed 200 OK in 34ms (Views: 29.0ms | ActiveRecord: 2.9ms | Allocations: 7505)
+
+
+Started GET "/professor" for 71.226.173.44 at 2021-02-23 01:40:54 +0000
+Cannot render console from 71.226.173.44! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/professor"):
+  
