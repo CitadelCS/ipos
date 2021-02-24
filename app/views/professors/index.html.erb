@@ -1,13 +1,13 @@
 <h1>All Students</h1>
 
 <ul>
-  <% @professors.each do |professor| %>
+  <% @students.each do |student| %>
     <li>
-      <a href="/professors/<%= professor.id %>">
-        <%= professor.Name %>
+      <a href="/professors/<%= student.id %>">
+        <%= student.Name %>
       </a>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "New Professor", new_professor_path %>
+<%= link_to "New Student", new_students_path %>

@@ -1,10 +1,10 @@
 class Professor < ApplicationRecord
     def index
-        @professors = Student.all
+        @students = Student.all
     end
 
     def show
-        @professors = Student.find(params[:id])
+        @student = Student.find(params[:id])
     end
     
     def new
