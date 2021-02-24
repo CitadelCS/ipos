@@ -11,7 +11,7 @@ courses = [{:prefix => 'CSCI', :name => 'Easy Course', :number => '100', :sectio
     	 {:prefix => 'CSCI', :name => 'Very Hard Course', :number => '400', :section => '01'}
       	  
   	 ]
-
+#sdfsfdv
 courses.each do |course|
   Course.create!(course)
 end
