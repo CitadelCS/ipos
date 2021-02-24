@@ -2835,3 +2835,30 @@ Processing by Clearance::SessionsController#new as HTML
 Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 8481)
 
 
+Started GET "/" for 155.225.2.100 at 2021-02-24 19:34:47 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (2.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:4
+  Rendered courses/index.html.erb within layouts/application (Duration: 66.4ms | Allocations: 6415)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 126.9ms | Allocations: 14455)
+Completed 200 OK in 175ms (Views: 125.9ms | ActiveRecord: 11.9ms | Allocations: 18410)
+
+
+Started GET "/" for 155.225.2.100 at 2021-02-24 19:34:49 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (2.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:4
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 4789)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 2.5ms | Allocations: 5194)
+
+
