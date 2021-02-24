@@ -62,7 +62,7 @@ node_modules/
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-
+#ad
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
