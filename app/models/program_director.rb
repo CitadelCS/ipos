@@ -1,0 +1,2 @@
+class ProgramDirector < ApplicationRecord
+end

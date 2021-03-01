@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Program Director</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Department</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @program_directors.each do |program_director| %>
+      <tr>
+        <td><%= program_director.Name %></td>
+        <td><%= program_director.Department %></td>
+        <td><%= link_to 'Show', program_director %></td>
+        <td><%= link_to 'Edit', edit_program_director_path(program_director) %></td>
+        <td><%= link_to 'Destroy', program_director, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Program Director', new_program_director_path %>
