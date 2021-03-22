@@ -2,3 +2,12 @@
 
 <%= link_to 'Edit', edit_professor_path(@professor) %> |
 <%= link_to 'Back', professors_path %>
+
+<h2>Advises:</h2>
+<ul>
+  <% @professor.student.each do |s| %>
+    <li>
+      <%=s.Name%>
+       
+  <% end %>
+</ul>

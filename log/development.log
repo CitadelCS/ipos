@@ -21989,3 +21989,665 @@ FOREIGN KEY ("professors_id")
 )[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/ubuntu/environment/ipos/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AdvisorFk (20210322172048)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "professors_id" bigint NOT NULL, CONSTRAINT "fk_rails_2ce59c6d95"
+FOREIGN KEY ("professors_id")
+  REFERENCES "professors" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/ubuntu/environment/ipos/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AdvisorFk (20210322172048)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "students" ADD "professors_id" bigint NOT NULL[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE INDEX "index_students_on_professors_id" ON "students" ("professors_id")[0m
+  [1m[35m (5.2ms)[0m  [1m[35mALTER TABLE "students" ADD CONSTRAINT "fk_rails_2ce59c6d95"
+FOREIGN KEY ("professors_id")
+  REFERENCES "professors" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210322172048"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/ubuntu/environment/ipos/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/ubuntu/environment/ipos/config/environment.rb:5)
+Started GET "/" for 155.225.2.100 at 2021-03-22 17:36:16 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#index as HTML
+Redirected to https://fabc26ba0472463caa521ae4ce35bdd0.vfs.cloud9.us-east-2.amazonaws.com/sign_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 19ms (ActiveRecord: 0.0ms | Allocations: 2882)
+
+
+Started GET "/sign_in" for 155.225.2.100 at 2021-03-22 17:36:16 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Clearance::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.6@ipos/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.6@ipos/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (Duration: 7.6ms | Allocations: 1313)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.6@ipos/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 89.9ms | Allocations: 13034)
+Completed 200 OK in 105ms (Views: 104.5ms | ActiveRecord: 0.0ms | Allocations: 15515)
+
+
+Started GET "/" for 155.225.2.100 at 2021-03-22 17:36:18 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#index as HTML
+Redirected to https://fabc26ba0472463caa521ae4ce35bdd0.vfs.cloud9.us-east-2.amazonaws.com/sign_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 344)
+
+
+Started GET "/sign_in" for 155.225.2.100 at 2021-03-22 17:36:19 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Clearance::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.6@ipos/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.6@ipos/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (Duration: 1.6ms | Allocations: 492)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.6@ipos/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 5105)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 5552)
+
+
+Started GET "/sign_up" for 155.225.2.100 at 2021-03-22 17:36:23 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Clearance::UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.6@ipos/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.6@ipos/gems/clearance-1.15.1/app/views/users/_form.html.erb (Duration: 4.1ms | Allocations: 637)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.6@ipos/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1700)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 6150)
+Completed 200 OK in 57ms (Views: 35.7ms | ActiveRecord: 7.6ms | Allocations: 12433)
+
+
+Started POST "/users" for 155.225.2.100 at 2021-03-22 17:36:35 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Clearance::UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"rmaharre@citadel.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rmaharre@citadel.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2021-03-22 17:36:36.180966"], ["updated_at", "2021-03-22 17:36:36.180966"], ["email", "rmaharre@citadel.edu"], ["encrypted_password", "$2a$12$E/pL4iHfaEw8CzjJzeweD.jrnLBUDZcOYtRlgrQmD0J6crys9YB.6"], ["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://fabc26ba0472463caa521ae4ce35bdd0.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 351ms (ActiveRecord: 9.5ms | Allocations: 5538)
+
+
+Started GET "/" for 155.225.2.100 at 2021-03-22 17:36:36 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:4
+  Rendered courses/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 981)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 5581)
+Completed 200 OK in 35ms (Views: 19.3ms | ActiveRecord: 4.7ms | Allocations: 8531)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/ubuntu/environment/ipos/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.8ms)[0m  [1m[32mINSERT INTO "courses" ("prefix", "name", "number", "section", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prefix", "CSCI"], ["name", "Easy Course"], ["number", 100], ["section", 1], ["created_at", "2021-03-22 17:37:09.091422"], ["updated_at", "2021-03-22 17:37:09.091422"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("prefix", "name", "number", "section", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prefix", "CSCI"], ["name", "Hard Course"], ["number", 200], ["section", 1], ["created_at", "2021-03-22 17:37:09.101495"], ["updated_at", "2021-03-22 17:37:09.101495"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("prefix", "name", "number", "section", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prefix", "CSCI"], ["name", "Medium Course"], ["number", 300], ["section", 1], ["created_at", "2021-03-22 17:37:09.109925"], ["updated_at", "2021-03-22 17:37:09.109925"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("prefix", "name", "number", "section", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prefix", "CSCI"], ["name", "Very Hard Course"], ["number", 400], ["section", 1], ["created_at", "2021-03-22 17:37:09.136956"], ["updated_at", "2021-03-22 17:37:09.136956"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("prefix", "name", "number", "section", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prefix", "CSCI"], ["name", "Java"], ["number", 111], ["section", 1], ["created_at", "2021-03-22 17:37:09.145246"], ["updated_at", "2021-03-22 17:37:09.145246"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("prefix", "name", "number", "section", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prefix", "CSCI"], ["name", "C++"], ["number", 299], ["section", 1], ["created_at", "2021-03-22 17:37:09.151853"], ["updated_at", "2021-03-22 17:37:09.151853"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("prefix", "name", "number", "section", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prefix", "CSCI"], ["name", "Python"], ["number", 310], ["section", 4], ["created_at", "2021-03-22 17:37:09.157817"], ["updated_at", "2021-03-22 17:37:09.157817"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("prefix", "name", "number", "section", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prefix", "CSCI"], ["name", "Stress Management When Programming"], ["number", 430], ["section", 1], ["created_at", "2021-03-22 17:37:09.164585"], ["updated_at", "2021-03-22 17:37:09.164585"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfessor Create (1.9ms)[0m  [1m[32mINSERT INTO "professors" ("Name", "CWID", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["Name", "Dr. Rob Stark"], ["CWID", 156456], ["created_at", "2021-03-22 17:37:09.190748"], ["updated_at", "2021-03-22 17:37:09.190748"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfessor Create (1.0ms)[0m  [1m[32mINSERT INTO "professors" ("Name", "CWID", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["Name", "Dr. Tyrion Lannister"], ["CWID", 151256], ["created_at", "2021-03-22 17:37:09.202228"], ["updated_at", "2021-03-22 17:37:09.202228"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfessor Create (1.1ms)[0m  [1m[32mINSERT INTO "professors" ("Name", "CWID", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["Name", "Dr. Sandor Clegane"], ["CWID", 151256], ["created_at", "2021-03-22 17:37:09.208495"], ["updated_at", "2021-03-22 17:37:09.208495"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfessor Create (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("Name", "CWID", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["Name", "Dr. Bronn"], ["CWID", 152346], ["created_at", "2021-03-22 17:37:09.214444"], ["updated_at", "2021-03-22 17:37:09.214444"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgramdirector Create (1.0ms)[0m  [1m[32mINSERT INTO "programdirectors" ("Name", "CWID", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["Name", "Dr. A"], ["CWID", 256456], ["created_at", "2021-03-22 17:37:09.234443"], ["updated_at", "2021-03-22 17:37:09.234443"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgramdirector Create (0.3ms)[0m  [1m[32mINSERT INTO "programdirectors" ("Name", "CWID", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["Name", "Dr. B"], ["CWID", 251256], ["created_at", "2021-03-22 17:37:09.245084"], ["updated_at", "2021-03-22 17:37:09.245084"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSemester Create (1.7ms)[0m  [1m[32mINSERT INTO "semesters" ("course1", "course2", "course3", "course4", "created_at", "updated_at", "season", "year") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course1", "CSCI 100"], ["course2", "CSCI 200"], ["course3", "CSCI 300"], ["course4", "CSCI 400"], ["created_at", "2021-03-22 17:37:09.273761"], ["updated_at", "2021-03-22 17:37:09.273761"], ["season", "Spring"], ["year", 2021]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSemester Create (0.4ms)[0m  [1m[32mINSERT INTO "semesters" ("course1", "course2", "course3", "course4", "created_at", "updated_at", "season", "year") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course1", "CSCI 111"], ["course2", "CSCI 299"], ["course3", "CSCI 310"], ["course4", "CSCI 430"], ["created_at", "2021-03-22 17:37:09.284389"], ["updated_at", "2021-03-22 17:37:09.284389"], ["season", "Summer"], ["year", 2021]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/students" for 155.225.2.100 at 2021-03-22 17:37:53 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+Started GET "/professors" for 155.225.2.100 at 2021-03-22 17:38:13 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (1.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:13
+  Rendered professors/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 4491)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 9077)
+Completed 200 OK in 56ms (Views: 36.4ms | ActiveRecord: 8.8ms | Allocations: 12394)
+
+
+Started GET "/professors" for 155.225.2.100 at 2021-03-22 17:42:34 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (1.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:13
+  Rendered professors/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 6321)
+Completed 200 OK in 32ms (Views: 25.2ms | ActiveRecord: 1.9ms | Allocations: 8824)
+
+
+Started GET "/professors/1" for 155.225.2.100 at 2021-03-22 17:42:40 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  [1m[36mProfessor Load (1.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:62:in `set_professor'
+  Rendering layout layouts/application.html.erb
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2800)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2880)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.3ms | Allocations: 5314)
+
+
+  
+ActionView::Template::Error (undefined method `student' for #<Professor:0x0000557728a76cb0>
+Did you mean?  students
+               students=):
+     5: 
+     6: <h2>Advises:</h2>
+     7: <ul>
+     8:   <% @professor.student.each do |student| %>
+     9:     <li>
+    10:       <%=student.name%>
+    11:        
+  
+app/views/professors/show.html.erb:8
+Started GET "/professors/1" for 155.225.2.100 at 2021-03-22 17:43:22 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  [1m[36mProfessor Load (1.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:62:in `set_professor'
+  Rendering layout layouts/application.html.erb
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2744)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 2824)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 3.3ms | Allocations: 5876)
+
+
+  
+ActionView::Template::Error (undefined method `student' for #<Professor:0x000055772b39fb50>
+Did you mean?  students
+               students=):
+     5: 
+     6: <h2>Advises:</h2>
+     7: <ul>
+     8:   <% @professor.student.each do |student| %>
+     9:     <li>
+    10:       <%=student.name%>
+    11:        
+  
+app/views/professors/show.html.erb:8
+Started GET "/professors" for 155.225.2.100 at 2021-03-22 17:43:26 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (1.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:13
+  Rendered professors/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 6318)
+Completed 200 OK in 27ms (Views: 18.8ms | ActiveRecord: 2.0ms | Allocations: 8085)
+
+
+Started GET "/professors" for 155.225.2.100 at 2021-03-22 17:45:15 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (1.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:13
+  Rendered professors/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1363)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 6322)
+Completed 200 OK in 43ms (Views: 35.4ms | ActiveRecord: 2.9ms | Allocations: 8803)
+
+
+Started GET "/professors" for 155.225.2.100 at 2021-03-22 17:45:49 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (6.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:13
+  Rendered professors/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 3643)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 3723)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 7.6ms | Allocations: 6170)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Professor:0x0000557728a5a150>
+Did you mean?  Name
+               Name?
+               Name=):
+    12:   <tbody>
+    13:     <% @professors.each do |professor| %>
+    14:       <tr>
+    15:         <%= professor.name %>
+    16:         <td><%= link_to 'Show', professor %></td>
+    17:         <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
+    18:         <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/professors/index.html.erb:15
+app/views/professors/index.html.erb:13
+Started GET "/professors" for 155.225.2.100 at 2021-03-22 17:46:21 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.9ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:13
+  Rendered professors/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 6338)
+Completed 200 OK in 27ms (Views: 19.9ms | ActiveRecord: 2.2ms | Allocations: 8819)
+
+
+Started GET "/professors" for 155.225.2.100 at 2021-03-22 17:46:46 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.9ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:13
+  Rendered professors/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1376)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 6334)
+Completed 200 OK in 28ms (Views: 19.6ms | ActiveRecord: 2.0ms | Allocations: 8809)
+
+
+Started GET "/professors/1" for 155.225.2.100 at 2021-03-22 17:46:48 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  [1m[36mProfessor Load (2.6ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:62:in `set_professor'
+  Rendering layout layouts/application.html.erb
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2744)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 2824)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.6ms | Allocations: 5149)
+
+
+  
+ActionView::Template::Error (undefined method `student' for #<Professor:0x0000557729d77030>
+Did you mean?  students
+               students=):
+     5: 
+     6: <h2>Advises:</h2>
+     7: <ul>
+     8:   <% @professor.student.each do |student| %>
+     9:     <li>
+    10:       <%=student.name%>
+    11:        
+  
+app/views/professors/show.html.erb:8
+Started GET "/professors/1" for 155.225.2.100 at 2021-03-22 17:47:36 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  [1m[36mProfessor Load (1.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:62:in `set_professor'
+  Rendering layout layouts/application.html.erb
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2823)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.7ms | Allocations: 5859)
+
+
+  
+ActionView::Template::Error (undefined method `student' for #<Professor:0x000055772937a8e8>
+Did you mean?  students
+               students=):
+     5: 
+     6: <h2>Advises:</h2>
+     7: <ul>
+     8:   <% @professor.student.each do |student| %>
+     9:     <li>
+    10:       <%=student.Name%>
+    11:        
+  
+app/views/professors/show.html.erb:8
+Started GET "/professors/1" for 155.225.2.100 at 2021-03-22 17:47:52 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  [1m[36mProfessor Load (1.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:62:in `set_professor'
+  Rendering layout layouts/application.html.erb
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 43.0ms | Allocations: 11021)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 11101)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 6.1ms | Allocations: 14141)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column students.professor_id does not exist
+LINE 1: SELECT "students".* FROM "students" WHERE "students"."profes...
+                                                  ^
+HINT:  Perhaps you meant to reference the column "students.professors_id".
+):
+     5: 
+     6: <h2>Advises:</h2>
+     7: <ul>
+     8:   <% @professor.students.each do |student| %>
+     9:     <li>
+    10:       <%=student.Name%>
+    11:        
+  
+app/views/professors/show.html.erb:8
+Started GET "/professors/1" for 155.225.2.100 at 2021-03-22 17:48:10 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  [1m[36mProfessor Load (1.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:62:in `set_professor'
+  Rendering layout layouts/application.html.erb
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1612)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 1692)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.8ms | Allocations: 4728)
+
+
+  
+ActionView::Template::Error (undefined method `students' for nil:NilClass):
+     5: 
+     6: <h2>Advises:</h2>
+     7: <ul>
+     8:   <% @professors.students.each do |student| %>
+     9:     <li>
+    10:       <%=student.Name%>
+    11:        
+  
+app/views/professors/show.html.erb:8
+Started GET "/professors/1" for 155.225.2.100 at 2021-03-22 17:48:19 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  [1m[36mProfessor Load (2.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:62:in `set_professor'
+  Rendering layout layouts/application.html.erb
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1610)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1690)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 4.6ms | Allocations: 4726)
+
+
+  
+ActionView::Template::Error (undefined method `student' for nil:NilClass):
+     5: 
+     6: <h2>Advises:</h2>
+     7: <ul>
+     8:   <% @professors.student.each do |student| %>
+     9:     <li>
+    10:       <%=student.Name%>
+    11:        
+  
+app/views/professors/show.html.erb:8
+Started GET "/professors/1" for 155.225.2.100 at 2021-03-22 17:48:38 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  [1m[36mProfessor Load (1.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:62:in `set_professor'
+  Rendering layout layouts/application.html.erb
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1611)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1691)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.3ms | Allocations: 4728)
+
+
+  
+ActionView::Template::Error (undefined method `student' for nil:NilClass):
+     5: 
+     6: <h2>Advises:</h2>
+     7: <ul>
+     8:   <% @professors.student.each do |s| %>
+     9:     <li>
+    10:       <%=s.Name%>
+    11:        
+  
+app/views/professors/show.html.erb:8
+Started GET "/professors/1" for 155.225.2.100 at 2021-03-22 17:48:48 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  [1m[36mProfessor Load (1.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:62:in `set_professor'
+  Rendering layout layouts/application.html.erb
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2743)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2823)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.8ms | Allocations: 5859)
+
+
+  
+ActionView::Template::Error (undefined method `student' for #<Professor:0x0000557729e25158>
+Did you mean?  students
+               students=):
+     5: 
+     6: <h2>Advises:</h2>
+     7: <ul>
+     8:   <% @professor.student.each do |s| %>
+     9:     <li>
+    10:       <%=s.Name%>
+    11:        
+  
+app/views/professors/show.html.erb:8
+Started GET "/" for 155.225.2.100 at 2021-03-22 17:49:34 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:4
+  Rendered courses/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 5590)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 10559)
+Completed 200 OK in 41ms (Views: 28.5ms | ActiveRecord: 7.5ms | Allocations: 12809)
+
+
+Started GET "/" for 155.225.2.100 at 2021-03-22 17:49:36 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f199a4e44c1a773235bfda0190f02bdbe1cd16f0"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:4
+  Rendered courses/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 5762)
+Completed 200 OK in 25ms (Views: 17.4ms | ActiveRecord: 2.8ms | Allocations: 7395)
+
+
+Started GET "/profesor" for 155.225.2.100 at 2021-03-22 17:49:57 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/profesor"):
+  

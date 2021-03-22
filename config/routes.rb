@@ -23,13 +23,13 @@ Rails.application.routes.draw do
   
   resources :programdirectors
   
-  resources :professors
+  resources :professors do
+   resources :students do
+    resources :plans
+   end
+  end
   
   resources :welcome
-  
-  resources :students do
-  resources :plans
-  end
   
   resources :semesters
   

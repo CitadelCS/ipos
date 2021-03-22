@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_22_084420) do
+ActiveRecord::Schema.define(version: 2021_03_22_172048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -134,6 +134,8 @@ ActiveRecord::Schema.define(version: 2021_03_22_084420) do
     t.string "Advisor"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "professors_id", null: false
+    t.index ["professors_id"], name: "index_students_on_professors_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -151,4 +153,5 @@ ActiveRecord::Schema.define(version: 2021_03_22_084420) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "discussions"
   add_foreign_key "comments", "users"
+  add_foreign_key "students", "professors", column: "professors_id"
 end
