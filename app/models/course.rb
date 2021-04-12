@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-    belongs_to :semesters
+    belongs_to :semester
     validates :name, presence: true
     validates :prefix, presence: true
     validates :number, presence: true

@@ -7,6 +7,6 @@ RSpec.describe Plan, type: :model do
       
       it "is not valid without a user_id" do
       subject.nameofplan = nil
-        expect(subject).to be_valid
+        expect(subject).to_not be_valid
       end 
   end
