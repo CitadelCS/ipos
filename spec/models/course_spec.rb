@@ -1,6 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe Course, :type => :model do
+before(:all) do
+    @course = Course.create(name: "Easy Course", number: 101, section: 01, prefix: "CSCI")
+end
+    it 'checks that a course can be created' do
+    expect(@course).to be_valid
+end
+it 'checks that a course can be read' do
+    expect(Course.find_by_name("Easy Course"))==(@course)
+end
+it 'checks that a course can be updated' do
+    @course.update(:name => "Easy Course Practicum")
+    expect(Course.find_by_name("Easy Course Practicum"))==(@course)
+end
+it 'checks that a course can be destroyed' do
+    @course.destroy
+    expect(Course.find_by(name: "Easy Course Practicum")).to be_nil
+end
+    
     subject { described_class.new }
 
   it "is valid with valid attributes" do
