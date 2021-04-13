@@ -1,6 +1,6 @@
 class Course < ApplicationRecord
-    validates :name, presence: true
-    validates :prefix, presence: true
-    validates :number, presence: true
-    validates :section, presence: true
+  validates_presence_of :prefix
+  validates_presence_of :name
+  validates_presence_of :number
+  validates_presence_of :section
 end
