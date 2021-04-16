@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
 # before action Elgazar notes 
-  before_action :require_login 
+  #before_action :require_login 
   #this could be used to protect 
   def index
     @courses = Course.all
@@ -17,10 +17,14 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
 
-    if @course.save
-      redirect_to @course
-    else
-      render :new
+    respond_to do |format|
+      if @course.save
+        format.html { redirect_to @course, notice: "Student was successfully created." }
+        format.json { render :show, status: :created, location: @course }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @course.errors, status: :unprocessable_entity }
+      end
     end
   end
   

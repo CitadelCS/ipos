@@ -13,7 +13,7 @@ gem 'rails', '~> 6.1.3'
 
 gem 'rspec'
 gem 'rails-controller-testing'
-
+gem "rolify"
 gem 'pg'
 gem 'figaro'
 # Use Puma as the app server
