@@ -1,5 +1,37 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Semesters</h1>
+
+<ul>
+  <% @semesters.each do |semester| %>
+    <li>
+      <%= link_to semester.season, semester %>
+      <%=semester.year%>
+      <%=semester.course1%>
+      <%=semester.course2%>
+      <%=semester.course3%>
+      <%=semester.course4%>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "New Semester", new_semester_path %>
+
+<p>Find this view in app/views/semesterss/index.html.erb</p>
+
+<h1>Courses</h1>
+
+<ul>
+  <% @courses.each do |course| %>
+    <li>
+      <%=course.prefix%>
+      <%= link_to course.name, course %>
+      <%=course.section%>
+      <%=course.number%>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "New Course", new_course_path %>
+<p>Find this view in app/views/courses/index.html.erb</p>
 <h1>Student: <%= @student.Name %></h1>
 
 <p>
@@ -38,14 +70,88 @@
 <strong>Add a Plan Of Study:</strong>
 
 <%= form_with model: [ @student, @student.plans.build ] do |form| %>
+ 
   <p>
-   Name Of POS: <%= form.text_field :nameofplan %>
-  </p>
+<%= form_with(scope: "course") do |f| %>
+<% f.select :name, @courses.map {|m| [m.name]}%>
+<% end %>
 
-  <p>
+<%= form_with(scope: "semester") do |f| %>
+<% f.select :season, @semesters.map {|m| [m.season]}%>
+<% end %>
+
+<%= form_with(scope: "course") do |f| %>
+<% f.select :name, @courses.map {|m| [m.name]}%>
+<% end %>
+
+<%= form_with(scope: "semester") do |f| %>
+<% f.select :season, @semesters.map {|m| [m.season]}%>
+<% end %>
+
+<%= form_with(scope: "course") do |f| %>
+<% f.select :name, @courses.map {|m| [m.name]}%>
+<% end %>
+<%= form_with(scope: "semester") do |f| %>
+<% f.select :season, @semesters.map {|m| [m.season]}%>
+<% end %>
+<%= form_with(scope: "course") do |f| %>
+<% f.select :name, @courses.map {|m| [m.name]}%>
+<% end %>
+<%= form_with(scope: "semester") do |f| %>
+<% f.select :season, @semesters.map {|m| [m.season]}%>
+<% end %>
+<%= form_with(scope: "course") do |f| %>
+<% f.select :name, @courses.map {|m| [m.name]}%>
+<% end %>
+<%= form_with(scope: "semester") do |f| %>
+<% f.select :season, @semesters.map {|m| [m.season]}%>
+<% end %>
+<%= form_with(scope: "course") do |f| %>
+<% f.select :name, @courses.map {|m| [m.name]}%>
+<% end %>
+<%= form_with(scope: "semester") do |f| %>
+<% f.select :season, @semesters.map {|m| [m.season]}%>
+<% end %><%= form_with(scope: "course") do |f| %>
+<% f.select :name, @courses.map {|m| [m.name]}%>
+<% end %>
+<%= form_with(scope: "semester") do |f| %>
+<% f.select :season, @semesters.map {|m| [m.season]}%>
+<% end %>  </p>
+  
+
     
     <%= form.submit %>
+  
+  
   </p>
+
+
 <% end %>
+<h1>SUBMIT FOR REVIEW</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.title %></td>
+        <td><%= link_to 'Show', note %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Note', new_note_path %>
+</p>
 
 </p>
