@@ -18,6 +18,7 @@ class ProfessorsController < ApplicationController
 
   # GET /professors/1/edit
   def edit
+    @professor = Professor.find(params[:id])
   end
 
   # POST /professors or /professors.json
@@ -37,14 +38,12 @@ class ProfessorsController < ApplicationController
 
   # PATCH/PUT /professors/1 or /professors/1.json
   def update
-    respond_to do |format|
-      if @professor.update(professor_params)
-        format.html { redirect_to @professor, notice: "Professor was successfully updated." }
-        format.json { render :show, status: :ok, location: @professor }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @professor.errors, status: :unprocessable_entity }
-      end
+    @professor = Professor.find(params[:id])
+
+    if @professor.update(professor_params)
+      redirect_to @professor
+    else
+      render :edit
     end
   end
 
@@ -65,6 +64,6 @@ class ProfessorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def professor_params
-      params.fetch(:professor, {})
+      params.require(:professor).permit(:Name)
     end
 end

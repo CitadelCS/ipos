@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  <div>
+    Name: <%= form.text_field :Name %>
+    <% professor.errors.full_messages_for(:Name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
