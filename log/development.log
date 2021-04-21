@@ -48855,3 +48855,149 @@ Processing by ProfessorsController#index as HTML
 Completed 200 OK in 50ms (Views: 19.6ms | ActiveRecord: 18.0ms | Allocations: 5743)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/ubuntu/environment/ipos/config/environment.rb:5)
+Started GET "/" for 155.225.2.100 at 2021-04-21 17:12:20 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LandingpageController#show as HTML
+Redirected to https://f832d8358acb494899811b48a8a86ca3.vfs.cloud9.us-east-2.amazonaws.com/sign_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 296ms (ActiveRecord: 0.0ms | Allocations: 223408)
+
+
+Started GET "/sign_in" for 155.225.2.100 at 2021-04-21 17:12:20 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Clearance::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (Duration: 12.9ms | Allocations: 1938)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 2604)
+Started GET "/" for 155.225.2.100 at 2021-04-21 17:12:21 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c70e5c63f4f89fab74b0595270c950624e5f379e"], ["LIMIT", 1]]
+Processing by LandingpageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landingpage/show.html.erb within layouts/application
+  Rendered layout layouts/application.html.erb (Duration: 2549.0ms | Allocations: 483060)
+Completed 200 OK in 2581ms (Views: 2579.9ms | ActiveRecord: 0.0ms | Allocations: 487686)
+
+
+  Rendered landingpage/show.html.erb within layouts/application (Duration: 1719.4ms | Allocations: 254229)
+  Rendered layout layouts/application.html.erb (Duration: 1723.0ms | Allocations: 256922)
+Completed 200 OK in 1790ms (Views: 1734.7ms | ActiveRecord: 0.0ms | Allocations: 281174)
+
+
+Started GET "/programdirectors" for 155.225.2.100 at 2021-04-21 17:12:28 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProgramdirectorsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c70e5c63f4f89fab74b0595270c950624e5f379e"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering programdirectors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (1.7ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/programdirectors/index.html.erb:19
+  [1m[36mStudent Load (3.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/programdirectors/index.html.erb:49
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/programdirectors/index.html.erb:79
+  Rendered programdirectors/index.html.erb within layouts/application (Duration: 45.8ms | Allocations: 12423)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 15190)
+Completed 200 OK in 89ms (Views: 42.4ms | ActiveRecord: 18.4ms | Allocations: 22772)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/ubuntu/environment/ipos/config/environment.rb:5)
+Started GET "/professors" for 155.225.2.100 at 2021-04-21 17:17:13 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProfessorsController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c70e5c63f4f89fab74b0595270c950624e5f379e"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (2.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:13
+  Rendered professors/index.html.erb within layouts/application (Duration: 29.3ms | Allocations: 5582)
+  Rendered layout layouts/application.html.erb (Duration: 239.6ms | Allocations: 62110)
+Completed 200 OK in 306ms (Views: 241.4ms | ActiveRecord: 16.0ms | Allocations: 75760)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/ubuntu/environment/ipos/config/environment.rb:5)
+Started GET "/" for 155.225.2.100 at 2021-04-21 17:18:06 +0000
+Cannot render console from 155.225.2.100! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c70e5c63f4f89fab74b0595270c950624e5f379e"], ["LIMIT", 1]]
+Processing by LandingpageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering landingpage/show.html.erb within layouts/application
+  Rendered landingpage/show.html.erb within layouts/application (Duration: 233.5ms | Allocations: 53967)
+  Rendered layout layouts/application.html.erb (Duration: 242.2ms | Allocations: 57613)
+Completed 200 OK in 264ms (Views: 249.1ms | ActiveRecord: 0.0ms | Allocations: 60853)
+
+
