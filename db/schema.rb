@@ -79,6 +79,8 @@ ActiveRecord::Schema.define(version: 2021_04_21_180117) do
     t.integer "section"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "semesters_id"
+    t.index ["semesters_id"], name: "index_courses_on_semesters_id"
   end
 
   create_table "discussions", force: :cascade do |t|
@@ -177,6 +179,19 @@ ActiveRecord::Schema.define(version: 2021_04_21_180117) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "semesters", force: :cascade do |t|
+    t.string "course1"
+    t.string "course2"
+    t.string "course3"
+    t.string "course4"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "season"
+    t.integer "year"
+    t.bigint "plan_id"
+    t.index ["plan_id"], name: "index_semesters_on_plan_id"
+  end
+
   create_table "students", force: :cascade do |t|
     t.string "Name"
     t.integer "CWID"
@@ -207,6 +222,8 @@ ActiveRecord::Schema.define(version: 2021_04_21_180117) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "discussions"
   add_foreign_key "comments", "users"
+  add_foreign_key "courses", "semesters", column: "semesters_id"
   add_foreign_key "professors", "programdirectors"
+  add_foreign_key "semesters", "plans"
   add_foreign_key "students", "professors"
 end
