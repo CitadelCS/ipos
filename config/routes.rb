@@ -36,16 +36,18 @@ Rails.application.routes.draw do
   
   resources :courses
   
-  constraints Clearance::Constraints::SignedIn.new { |user| user.admin? } do
-    root to: "landingpage#show", as: :admin_root
-  end
+  root 'landingpage#show'
+  
+  #constraints Clearance::Constraints::SignedIn.new { |user| user.admin? } do
+  #  root to: "landingpage#show", as: :admin_root
+  #end
 
-  constraints Clearance::Constraints::SignedIn.new do
-    root to: "landingpage#show", as: :signed_in_root
-  end
+  #constraints Clearance::Constraints::SignedIn.new do
+  #  root to: "landingpage#show", as: :signed_in_root
+  #end
 
-  constraints Clearance::Constraints::SignedOut.new do
-    root to: "landingpage#show"
-  end
+  #constraints Clearance::Constraints::SignedOut.new do
+  #  root to: "landingpage#show"
+  #end
 
 end
