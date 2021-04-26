@@ -1,18 +1,18 @@
-class Ability
-  include CanCan::Ability
+#class Ability
+ # include CanCan::Ability
 #if you are going to use these in the show.html.erb you need to put above the <%link_to 
 #<%if can? :actionperform, @model you want to perform it on checking users ability
 
 #also in the controller.rb of function like def edit you would have to put at the bottom
 
 #of the method unauthorized! if cannot? 
-  alias_action :create, :read, :update, :destroy, to: :crud
+ # alias_action :create, :read, :update, :destroy, to: :crud
   
-  def initialize(user)
-  can :read, :all 
-  end 
+#  def initialize(user)
+ # can :read, :all 
+ # end 
   
-end
+#end
 
   
   
