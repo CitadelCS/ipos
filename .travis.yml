@@ -11,5 +11,8 @@ script:
   - "bundle exec rake test:system"
 services: 
   - postgresql
-tests: 
-  - rspec
+env:
+  global:
+  - COVERAGE=1
+  matrix:
+  - RAKE_TASK=rspec
