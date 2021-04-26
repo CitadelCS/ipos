@@ -3,8 +3,6 @@
 IPOS is a way for grad students to submit a plan of study from a list of offered courses. The program director then can accept or deny the request.
 Advisors can also see their advises plan of studies. The goal of IPOS is to centralize the acceptance of plan of studies for CS majors in grad school.
 
-https://git.heroku.com/sleepy-thicket-65048.git This link will take you to a live example of our project.
-
 ## The following are instructions for setting up a new enviroment in AWS to edit IPOS
 
 1. Create a C9 tiny AWS ubuntu enviroment
@@ -137,4 +135,4 @@ This is where all the courses are listed.
 5. We have a lot of extra MVCs for features we did not get too like comments. It was too messy to remove them.
 6. Heroku Link https://git.heroku.com/sleepy-thicket-65048.git
 7. Pivitol Tracker Link https://www.pivotaltracker.com/n/projects/2488588
-8. Additional Github Repo Link 
+8. Additional Github Repo Link https://github.com/RexNihilo/sopi
