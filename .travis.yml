@@ -4,9 +4,6 @@ before_script:
 language: "ruby 2.6.6"
 rvm:
   - 2.6.6
-script: 
-  - "bundle exec rake test"
-  - "bundle exec rake test:system"
 services: 
   - postgresql
 env:
