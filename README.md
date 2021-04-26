@@ -3,6 +3,8 @@
 IPOS is a way for grad students to submit a plan of study from a list of offered courses. The program director then can accept or deny the request.
 Advisors can also see their advises plan of studies. The goal of IPOS is to centralize the acceptance of plan of studies for CS majors in grad school.
 
+https://git.heroku.com/sleepy-thicket-65048.git This link will take you to a live example of our project.
+
 ## The following are instructions for setting up a new enviroment in AWS to edit IPOS
 
 1. Create a C9 tiny AWS ubuntu enviroment
@@ -46,3 +48,78 @@ Advisors can also see their advises plan of studies. The goal of IPOS is to cent
 2. git commit -m "Add comments about branch here"
 3. git push origin (name of your branch)
 4. go create a pull request in github if done with branch
+
+
+## Walk Through
+
+### Login Page
+
+![IPOS Login Page](https://github.com/CitadelCS/ipos/images/iposLogin.jpg)
+
+### Signup Page
+
+![IPOS Signup Page](https://github.com/CitadelCS/ipos/images/iposSignup.jpg)
+
+### Landing Page
+
+After Signing in, you are shown this page. We do not have role based routing so you are able to select the different pages
+from here.
+
+![IPOS Landing Page](https://github.com/CitadelCS/ipos/images/iposLandingPage.jpg)
+
+### Student
+
+You are able to see all the students if you click the Student Tab.
+
+![IPOS Student View](https://github.com/CitadelCS/ipos/images/iposStudentsView.jpg)
+
+### Specific Student
+
+This is where you can see all the students information and also were you view plan of studies and submit new ones.
+
+![IPOS New Student View](https://github.com/CitadelCS/ipos/images/iposStudentPOS.jpg)
+
+### New Student
+
+![IPOS New Student View](https://github.com/CitadelCS/ipos/images/iposStudentNew.jpg)
+
+### Edit Student
+
+![IPOS Edit Student View](https://github.com/CitadelCS/ipos/images/iposStudentEdit.jpg)
+
+### Student POS
+
+![IPOS POS View](https://github.com/CitadelCS/ipos/images/iposStudentPosView.jpg)
+
+### Professor/Advisor
+
+This is where you are able to view all the professors. If you click show, then you will see all the advises.
+
+![IPOS Professor/Advisor View](https://github.com/CitadelCS/ipos/images/iposProfessorView.jpg)
+
+### Advisee
+
+This is where you can see all the students assigned to a specific professor.
+
+![IPOS Advisee View](https://github.com/CitadelCS/ipos/images/iposProfessorAdvisee.jpg)
+
+### New Professor
+
+![IPOS New Professor View](https://github.com/CitadelCS/ipos/images/iposProfessorNew.jpg)
+
+### Program Director
+
+There can only be one program director and it is hard coded into the application. To change it. The seed file must
+be changed. In this view, you can see all the students, professors/advisors, and courses listed.
+
+![IPOS Program Director View](https://github.com/CitadelCS/ipos/images/iposProgramDirector.jpg)
+
+### Courses
+
+This is where all the courses are listed.
+
+![IPOS Courses View](https://github.com/CitadelCS/ipos/images/iposCourses.jpg)
+
+### New Courses
+
+![IPOS New Courses View](https://github.com/CitadelCS/ipos/images/iposCoursesNew.jpg)
