@@ -54,75 +54,75 @@ Advisors can also see their advises plan of studies. The goal of IPOS is to cent
 
 ### Login Page
 
-![IPOS Login Page](/images/iposLogin.jpg?raw=true)
+![IPOS Login Page](./images/iposLogin.JPG)
 
 ### Signup Page
 
-![IPOS Signup Page](/images/iposSignup.jpg?raw=true)
+![IPOS Signup Page](./images/iposSignup.JPG)
 
 ### Landing Page
 
 After Signing in, you are shown this page. We do not have role based routing so you are able to select the different pages
 from here.
 
-![IPOS Landing Page](/images/iposLandingPage.jpg?raw=true)
+![IPOS Landing Page](./images/iposLandingPage.JPG)
 
 ### Student
 
 You are able to see all the students if you click the Student Tab.
 
-![IPOS Student View](/images/iposStudentsView.jpg?raw=true)
+![IPOS Student View](./images/iposStudentsView.JPG)
 
 ### Specific Student
 
 This is where you can see all the students information and also were you view plan of studies and submit new ones.
 
-![IPOS New Student View](/images/iposStudentPOS.jpg?raw=true)
+![IPOS New Student View](./images/iposStudentPOS.JPG)
 
 ### New Student
 
-![IPOS New Student View](/images/iposStudentNew.jpg?raw=true)
+![IPOS New Student View](./images/iposStudentNew.JPG)
 
 ### Edit Student
 
-![IPOS Edit Student View](/images/iposStudentEdit.jpg?raw=true)
+![IPOS Edit Student View](./images/iposStudentEdit.JPG)
 
 ### Student POS
 
-![IPOS POS View](/images/iposStudentPosView.jpg?raw=true)
+![IPOS POS View](./images/iposStudentPosView.JPG)
 
 ### Professor/Advisor
 
 This is where you are able to view all the professors. If you click show, then you will see all the advises.
 
-![IPOS Professor/Advisor View](/images/iposProfessorView.jpg?raw=true)
+![IPOS Professor/Advisor View](./images/iposProfessorView.JPG)
 
 ### Advisee
 
 This is where you can see all the students assigned to a specific professor.
 
-![IPOS Advisee View](/images/iposProfessorAdvisee.jpg?raw=true)
+![IPOS Advisee View](./images/iposProfessorAdvisee.JPG)
 
 ### New Professor
 
-![IPOS New Professor View](/images/iposProfessorNew.jpg?raw=true)
+![IPOS New Professor View](./images/iposProfessorNew.JPG)
 
 ### Program Director
 
 There can only be one program director and it is hard coded into the application. To change it. The seed file must
 be changed. In this view, you can see all the students, professors/advisors, and courses listed.
 
-![IPOS Program Director View](/images/iposProgramDirector.jpg?raw=true)
+![IPOS Program Director View](./images/iposProgramDirector.JPG)
 
 ### Courses
 
 This is where all the courses are listed.
 
-![IPOS Courses View](/images/iposCourses.jpg?raw=true)
+![IPOS Courses View](./images/iposCourses.JPG)
 
 ### New Courses
 
-![IPOS New Courses View](/images/iposCoursesNew.jpg?raw=true)
+![IPOS New Courses View](./images/iposCoursesNew.JPG)
 
 
 
