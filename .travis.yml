@@ -4,8 +4,6 @@ before_script:
 language: "ruby 2.6.6"
 rvm:
   - 2.6.6
-services: 
-  - postgresql
 env:
   global:
   - COVERAGE=1
