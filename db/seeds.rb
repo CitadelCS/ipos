@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-programdirectors = [{:Name => 'Dr. A', :CWID => '256456'},
-    	{:Name => 'Dr. B', :CWID => '251256'},
+programdirectors = [{:Name => 'Dr. V', :CWID => '10619830'}
     	]
 programdirectors.each do |programdirector|
   Programdirector.create!(programdirector)
@@ -48,14 +47,20 @@ plans.each do |plan|
   Plan.create!(plan)
 end 
 
-courses = [{:prefix => 'CSCI', :name => 'Easy Course', :number => '100', :section => '01'},
-    	 {:prefix => 'CSCI', :name => 'Hard Course', :number => '200', :section => '01'},
-    	 {:prefix => 'CSCI', :name => 'Medium Course', :number => '300', :section => '01'},
-    	 {:prefix => 'CSCI', :name => 'Very Hard Course', :number => '400', :section => '01'},
-       {:prefix => 'CSCI', :name => 'Java', :number => '111', :section => '01'},
-    	 {:prefix => 'CSCI', :name => 'C++', :number => '299', :section => '01'},
-    	 {:prefix => 'CSCI', :name => 'Python', :number => '310', :section => '04'},
-    	 {:prefix => 'CSCI', :name => 'Stress Management When Programming', :number => '430', :section => '01'}
+courses = [{:prefix => 'CSCI', :name => 'Data Modeling', :number => '601', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Foundations of Software Engineering', :number => '602', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Object-Oriented Design Patterns', :number => '603', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Distributed Computer Systems Architecture', :number => '604', :section => '01'},
+       {:prefix => 'CSCI', :name => 'Applied Algorithms', :number => '605', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Advanced Algorithms', :number => '612', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Advanced Computer Architecture', :number => '616', :section => '04'},
+    	 {:prefix => 'CSCI', :name => 'Advanced Operating Systems', :number => '618', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Automate Theory', :number => '631', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Principles of Programming Languages', :number => '632', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Principles of Computer Security', :number => '633', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Project Change and Management', :number => '634', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Advanced Cybersecurity', :number => '641', :section => '01'},
+    	 {:prefix => 'CSCI', :name => 'Software Systems Design and Implementation', :number => '656', :section => '01'}
     	 ]
 courses.each do |course|
   Course.create!(course)
