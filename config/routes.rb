@@ -35,8 +35,6 @@ Rails.application.routes.draw do
   end
   
   resources :courses
-
-  mount RailsAdmin::Engine => "/admin", as: "rails_admin"
   
   constraints Clearance::Constraints::SignedIn.new { |user| user.admin? } do
     root to: "landingpage#show", as: :admin_root
