@@ -11,6 +11,7 @@ https://git.heroku.com/sleepy-thicket-65048.git This link will take you to a liv
 2. git clone (github link to IPOS)
 3. cd ipos
 4. bundle install
+5. run resize.sh 14 to have enough space in enviroment
 5. git branch (name of your branch)
 6. git checkout (name of your branch)
 7. rvm get stable
@@ -48,6 +49,7 @@ https://git.heroku.com/sleepy-thicket-65048.git This link will take you to a liv
 2. git commit -m "Add comments about branch here"
 3. git push origin (name of your branch)
 4. go create a pull request in github if done with branch
+
 
 
 ## Walk Through
@@ -123,3 +125,16 @@ This is where all the courses are listed.
 ### New Courses
 
 ![IPOS New Courses View](https://github.com/CitadelCS/ipos/images/iposCoursesNew.jpg)
+
+
+
+## Important Notes
+
+1. The Program Director is hard coded into the application. To change it, you must edit the seed file.
+2. There is no role based routing. The link below is to another code base we made but did not finish that tries to acomplish what we failed to do in this one.
+3. The routs are a mess and we apploggize. We started this code from scratch and did not see the importance of fixing it compared to more features.
+4. Cucumber does not work too well because of Clearence. We used that for our user athentication. I sujest useing the other code repo as a new base.
+5. We have a lot of extra MVCs for features we did not get too like comments. It was too messy to remove them.
+6. Heroku Link https://git.heroku.com/sleepy-thicket-65048.git
+7. Pivitol Tracker Link https://www.pivotaltracker.com/n/projects/2488588
+8. Additional Github Repo Link 
