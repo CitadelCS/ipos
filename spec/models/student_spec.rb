@@ -29,5 +29,6 @@ RSpec.describe Student, type: :model do
         expect(subject).to be_valid
       end
   
+  
   end
 end

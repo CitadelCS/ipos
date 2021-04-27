@@ -5,6 +5,6 @@ FactoryBot.define do
         number {Faker::Number.number(digits: 3)}
         section {Faker::Number.number(digits: 1)}
         #semesters_id {Faker::Number.number(digits: 6)}
-        semester
+        #semester
     end
 end
