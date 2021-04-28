@@ -15,27 +15,35 @@
 RSpec.describe "/comments", type: :request do
   # Comment. As you add validations to Comment, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
-
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  # let(:valid_attributes) {subject(create :comment)}
+  # let(:invalid_attributes) { }
+  
+  before :all do
+    Comment.destroy_all
+    User.destroy_all
+    Discussion.destroy_all
+    
+    @user_1 = User.create!(email: "Bob@gmail.com", password: "abc")
+    @discussion_1 = Discussion.create!(title: "This is a discussion")
+    @comment_1 = Comment.create!(body: "This is a comment", user: @user_1, discussion: @discussion_1)
+    @comment_2 = Comment.create!(body: "This is another comment", user: @user_1, discussion: @discussion_1)
+  end
 
   describe "GET /index" do
     it "renders a successful response" do
-      Comment.create! valid_attributes
-      get comments_url
-      expect(response).to be_successful
+      visit "/comments"
+      
+      expect(page.status_code).to eq(200)
+      expect(page).to have_content(@comment_1.body)
     end
   end
 
   describe "GET /show" do
     it "renders a successful response" do
-      comment = Comment.create! valid_attributes
-      get comment_url(comment)
-      expect(response).to be_successful
+      visit comment_path(@comment_1)
+      
+      expect(page.status_code).to eq(200)
+      expect(page).to have_content(@comment_1.body)
     end
   end
 
@@ -89,14 +97,14 @@ RSpec.describe "/comments", type: :request do
       }
 
       it "updates the requested comment" do
-        comment = Comment.create! valid_attributes
+        # comment = Comment.create! valid_attributes
         patch comment_url(comment), params: { comment: new_attributes }
         comment.reload
         skip("Add assertions for updated state")
       end
 
       it "redirects to the comment" do
-        comment = Comment.create! valid_attributes
+        # comment = Comment.create! valid_attributes
         patch comment_url(comment), params: { comment: new_attributes }
         comment.reload
         expect(response).to redirect_to(comment_url(comment))
@@ -105,7 +113,7 @@ RSpec.describe "/comments", type: :request do
 
     context "with invalid parameters" do
       it "renders a successful response (i.e. to display the 'edit' template)" do
-        comment = Comment.create! valid_attributes
+        # comment = Comment.create! valid_attributes
         patch comment_url(comment), params: { comment: invalid_attributes }
         expect(response).to be_successful
       end
@@ -114,14 +122,14 @@ RSpec.describe "/comments", type: :request do
 
   describe "DELETE /destroy" do
     it "destroys the requested comment" do
-      comment = Comment.create! valid_attributes
+      # comment = Comment.create! valid_attributes
       expect {
         delete comment_url(comment)
       }.to change(Comment, :count).by(-1)
     end
 
     it "redirects to the comments list" do
-      comment = Comment.create! valid_attributes
+      # comment = Comment.create! valid_attributes
       delete comment_url(comment)
       expect(response).to redirect_to(comments_url)
     end
